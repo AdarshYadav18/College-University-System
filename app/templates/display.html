@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<body>
+<table border="1">
+    <tr>
+        <th> ID</th>
+        <th> EID</th>
+        <th> NAME</th>
+        <th> LAST NAME</th>
+        <th> EMAILID</th>
+        <th> CONTACT</th>
+        <th> GENDER</th>
+        <th> COLLEGE NAME</th>
+         <th> GRADE</th>
+        <th> ACTION</th>
+    </tr>
+    {% for i in res %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.Sid}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.lastname}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.contact}}</td>
+        <td>{{i.gender}}</td>
+        <td>{{i.college_name}}</td>
+        <td>{{i.grade}}</td>
+        <td> <a href="/edit/{{i.id}}">edit</a>
+        <a href="/delete/{{i.id}}"> delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<form action="saveform">
+    <button type="submit">home</button>
+</form>
+
+
+</body>
+</html>

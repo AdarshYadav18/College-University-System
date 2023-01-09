@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/update/{{res.id}}" method="post">
+{% csrf_token %}
+<p><label for="id_Sid">Id:</label> <input type="text" name="Sid" maxlength="20" required id="id_Sid" value="{{res.Sid}}"></p>
+<p><label for="id_name">Name:</label> <input type="text" name="name" maxlength="50" required id="id_name" value="{{res.name}}"></p>
+<p><label for="id_lastname">Last Name:</label> <input type="text" name="lastname" maxlength="50" required id="id_lastname" value="{{res.lastname}}"></p>
+<p><label for="id_email">Email:</label> <input type="email" name="email" maxlength="254" required id="id_email" value="{{res.email}}"></p>
+<p><label for="id_contact">Contact:</label> <input type="text" name="contact" maxlength="50" required id="id_contact" value="{{res.contact}}"></p>
+<p><label for="id_gender">Gender:</label> <input type="text" name="gender" maxlength="50" required id="id_gender" value="{{res.gender}}"></p>
+<p><label for="id_college_name">College Name:</label> <input type="text" name="college_name" maxlength="50" required id="id_college_name" value="{{res.college_name}}"></p>
+<p><label for="id_grade">12th Grade:</label> <input type="text" name="grade" maxlength="50" required id="id_grade" value="{{res.grade_name}}"></p>
+
+<button type="submit">update</button>
+</form>
+</body>
+</html>
